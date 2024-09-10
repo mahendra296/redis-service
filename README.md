@@ -59,3 +59,12 @@ Then open new cmd and start redis server with below command
 ````
 redis-server.exe "C:\Program Files\Redis\redis.windows.conf"
 ````
+
+Extra command for remove alis
+````
+keytool -list -v -keystore "C:\Program Files\Java\jdk-11.0.12\lib\security\cacerts"
+-storepass changeit
+
+keytool -delete -alias redis_localhost_certificate -keystore "C:\Program Files\Java\jdk-11.0.12\lib\security\cacerts"
+
+````
